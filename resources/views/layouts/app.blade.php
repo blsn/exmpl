@@ -15,6 +15,7 @@
         @include('inc.navbar')
         <main class="py-4">
             <div class="container">
+                @include('partials.alerts')
                 @yield('content')
             </div>
         </main>

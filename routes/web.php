@@ -25,3 +25,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [App\Http\Controllers\PagesController::class, 'index'])->name('index');
 Route::get('/about', [App\Http\Controllers\PagesController::class, 'about'])->name('about');
 Route::get('/services', [App\Http\Controllers\PagesController::class, 'services'])->name('services');
+
+Route::resource('tasks', '\App\Http\Controllers\TasksController')->middleware(['auth']); // shorten the url
